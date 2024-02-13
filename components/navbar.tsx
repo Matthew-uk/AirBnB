@@ -4,7 +4,7 @@ import TopNav from "./topNav";
 
 const Navbar = () => {
   return (
-    <div className="px-10 py-6">
+    <div className="md:px-10 md:py-4 px-4 py-2">
       <TopNav />
     </div>
   );

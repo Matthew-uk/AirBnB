@@ -7,14 +7,14 @@ import Link from "next/link";
 const TopNav = () => {
   const [active, setActive] = useState<number>(1);
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const navMidStyles = `cursor-pointer duration-300 ease-in-out  p-2 hover:bg-gray-200 hover:text-black hover:rounded-full`;
-  const dropDownStyles = `hover:bg-gray-400 hover:text-black transition-all font-thin p-2`;
+  const navMidStyles = `cursor-pointer duration-300 ease-in-out p-2 hover:bg-gray-200 hover:text-black hover:rounded-full`;
+  const dropDownStyles = `hover:bg-gray-400 hover:text-black transition-all font-light p-2`;
   return (
     <div className="flex flex-row w-full justify-between">
       {/* Left */}
-      <div className="flex flex-row items-center justify-start font-extrabold text-pink">
+      <div className="flex flex-row items-center justify-start text-pink">
         <SiAirbnb size={32} className="text-pink" />
-        <h2 className="text-xl font-extrabold ml-1 hidden lg:block">airbnb</h2>
+        <h2 className="text-xl font-bold ml-1 hidden lg:block">airbnb</h2>
       </div>
       {/* Center */}
       <div
@@ -42,8 +42,10 @@ const TopNav = () => {
       </div>
       {/* Right */}
       <div className="flex flex-row items-center justify-between gap-4">
-        <h2 className={`${navMidStyles} text-sm`}>Airbnb your home</h2>
-        <IoGlobeOutline size={30} className={`${navMidStyles} text-black`} />
+        <h2 className={`${navMidStyles} text-sm hidden md:block`}>
+          Airbnb your home
+        </h2>
+        <IoGlobeOutline size={32} className={`${navMidStyles} text-black`} />
         <div className="relative rounded-full border border-gray-300 flex flex-row items-center gap-4 p-2">
           <IoMenuOutline
             onClick={() => setShowMenu(!showMenu)}
