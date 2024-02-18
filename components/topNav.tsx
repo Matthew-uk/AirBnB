@@ -18,24 +18,30 @@ const TopNav = () => {
       </div>
       {/* Center */}
       <div
-        className=" hidden lg:flex flex-row gap-8 text-gray-500"
+        className=" hidden lg:flex flex-row items-center font-normal gap-8 text-gray-500"
         style={{ fontSize: "0.9em" }}
       >
         <h2
           onClick={() => setActive(1)}
-          className={`${active === 1 && "text-black"} ${navMidStyles} `}
+          className={`${
+            active === 1 && "text-black text-base"
+          } ${navMidStyles} `}
         >
           Stays
         </h2>
         <h2
           onClick={() => setActive(2)}
-          className={`${active === 2 && "text-black"} ${navMidStyles} `}
+          className={`${
+            active === 2 && "text-black text-base"
+          } ${navMidStyles} `}
         >
           Experiences
         </h2>
         <h2
           onClick={() => setActive(3)}
-          className={`${active === 3 && "text-black"} ${navMidStyles} `}
+          className={`${
+            active === 3 && "text-black text-base"
+          } ${navMidStyles} `}
         >
           Online Exeperiences
         </h2>
@@ -54,7 +60,7 @@ const TopNav = () => {
           />
           {/* Popup Menu */}
           {showMenu && (
-            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg py-2 w-60 text-sm justify-between">
+            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg py-2 w-60 text-sm justify-between z-50">
               <div className="flex flex-col gap-1">
                 <Link className={`${dropDownStyles}`} href={"/signup"}>
                   Sign Up

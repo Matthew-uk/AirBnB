@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
 import TopNav from "./topNav";
+import SearchNav from "./searchNav";
 
 const Navbar = () => {
   return (
-    <div className="md:px-10 md:py-4 px-4 py-2">
+    <div className="md:px-10 md:py-6 px-4 py-2 border-b border-gray-200">
       <TopNav />
+      <SearchNav />
     </div>
   );
 };
